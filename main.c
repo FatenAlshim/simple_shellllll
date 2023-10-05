@@ -5,6 +5,6 @@
  * @ac: argument counter
  * @av: argument vector
  *
- * Return: 0 on success, 1 on failing
+ * Return: 0 on succes, 1 on failing
  */
 
