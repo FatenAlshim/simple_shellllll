@@ -12,4 +12,14 @@ int is_delim(char c, char *delim)
 			return (1);
 	return (0);
 }
+/**
+ * interactive - returnss true at shell >> interactive mode
+ * @info: struct addresss
+ *
+ * Return: 1 if interactive modee, 0 otherwisee
+ */
+int interactive(info_t *info)
+{
+	return (isatty(STDIN_FILENO) && info->readfd <= 2);
+}
 
