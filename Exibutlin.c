@@ -28,3 +28,9 @@ int _myexit(info_t *info)
 	info->err_num = -1;
 	return (-2);
 }
+/**
+ * _mycd - Replace the directory of the processing
+ * @info: Struct contain estimated arguments. Used to maintain
+ * const function datatype.
+ * Return: Always 0
+ */
