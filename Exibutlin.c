@@ -1,6 +1,14 @@
 #include "shell.h"
 
 /**
+ * _myhelp - replace the directory of the process
+ * @info: Structure contain estimated arguments. Used to maintain
+ * constant function prototype.
+ * Return: Always 0
+ */
+
+
+/**
  * _myexit - get out of the shell
  * @info: Struct contain estimated aurgements. Used to maintaing
  * const function datatype.
