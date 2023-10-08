@@ -61,3 +61,11 @@ buf[i] = '\0';
 break;
 }
 }
+/**
+ * convert_number - change method, a copy of simple_ataio
+ * @num: number.
+ * @base: base.
+ * @flags: argument flags
+ *
+ * Return: string
+ */
