@@ -1,3 +1,4 @@
+#include "shell.h"
 /**
  * _putfd - writes character c to given
  * @c: The characterr to printt
@@ -37,4 +38,20 @@ i += _putfd(*str++, fd);
 }
 return (i);
 }
-
+/**
+ * _eputs - printss input string
+ * @str: string to bee printedd
+ *
+ * Return: Nothingg
+ */
+void _eputs(char *str)
+{
+int i = 0;
+if (!str)
+return;
+while (str[i] != '\0')
+{
+_eputchar(str[i]);
+i++;
+}
+}
