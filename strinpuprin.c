@@ -19,4 +19,22 @@ if (c != BUF_FLUSH)
 buf[i++] = c;
 return (1);
 }
+/**
+ * _putsfd - printss an input stringg
+ * @str: string to be printed
+ * @fd: filedescriptor to write too
+ *
+ * Return: no. of chars put
+ */
+int _putsfd(char *str, int fd)
+{
+int i = 0;
+if (!str)
+return (0);
+while (*str)
+{
+i += _putfd(*str++, fd);
+}
+return (i);
+}
 
