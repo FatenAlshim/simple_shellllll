@@ -42,7 +42,7 @@ return (0);
 return (1);
 }
 /**
- * _myalias - mimicss the alias builtin 
+ * _myalias - mimicss the alias builtin
  * @info: Structure containing potentiall arguments. Used to maintain
  *          constant function prototypee.
  *  Return: Always 0
