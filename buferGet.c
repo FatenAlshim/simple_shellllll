@@ -55,3 +55,11 @@ _puts("\n");
 _puts("$ ");
 _putchar(BUF_FLUSH);
 }
+/**
+ * read_buf - process a buffer
+ * @info: parameter struct
+ * @buf: buffer
+ * @i: size
+ *
+ * Return: r
+ */
