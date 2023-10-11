@@ -55,3 +55,10 @@ node = next_node;
 }
 *head_ptr = NULL;
 }
+
+/**
+ * print_list_str - prints only the str element of a list_t linked list
+ * @h: pointer to 1st node
+ *
+ * Return: size of list
+ */
