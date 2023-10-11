@@ -20,12 +20,12 @@ int write_history(info_t *info)
 		return (-1);
 	for (node = info->history; node; node = node->next)
 	{
-		_putsfd(node->str, fd);
-		_putfd('\n', fd);
-	}
-	_putfd(BUF_FLUSH, fd);
-	close(fd);
-	return (1);
+	_putsfd(node->str, fd);
+	_putfd('\n', fd);
+}
+_putfd(BUF_FLUSH, fd);
+close(fd);
+return (1);
 /**
  * get_history_file - getss the history file
  * @info: pparameter sstruct
@@ -55,15 +55,14 @@ return (buf);
  */
 int renumber_history(info_t *info)
 {
-	list_t *node = info->history;
-	int i = 0;
-
-	while (node)
-	{
-		node->num = i++;
-		node = node->next;
-	}
-	return (info->histcount = i);
+list_t *node = info->history;
+int i = 0;
+while (node)
+{
+node->num = i++;
+node = node->next;
+}
+return (info->histcount = i);
 }
 /**
  * build_history_list - aadds entry to   history linked list
@@ -75,14 +74,11 @@ int renumber_history(info_t *info)
  */
 int build_history_list(info_t *info, char *buf, int linecount)
 {
-	list_t *node = NULL;
-
-	if (info->history)
-		node = info->history;
-	add_node_end(&node, buf, linecount);
-
-	if (!info->history)
-		info->history = node;
-	return (0);
+list_t *node = NULL;
+if (info->history)
+node = info->history;
+add_node_end(&node, buf, linecount);
+if (!info->history)
+info->history = node;
+return (0);
 }
-
