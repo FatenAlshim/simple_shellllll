@@ -1,3 +1,4 @@
+#include "shell.h"
 /**
  * write_history - createss  file, or appends to existing ffile
  * @info: pparameter struct
@@ -25,4 +26,24 @@ int write_history(info_t *info)
 	_putfd(BUF_FLUSH, fd);
 	close(fd);
 	return (1);
-
+/**
+ * get_history_file - getss the history file
+ * @info: pparameter sstruct
+ *
+ * Return: allocated sstring containg history ffile
+ */
+char *get_history_file(info_t *info)
+{
+char *buf, *dir;
+dir = _getenv(info, "HOME=");
+if (!dir)
+return (NULL);
+buf = malloc(sizeof(char) * (_strlen(dir) + _strlen(HIST_FILE) + 2));
+if (!buf)
+	return (NULL);
+buf[0] = 0;
+_strcpy(buf, dir);
+_strcat(buf, "/");
+_strcat(buf, HIST_FILE);
+return (buf);
+}
