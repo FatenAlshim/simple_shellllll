@@ -47,3 +47,22 @@ _strcat(buf, "/");
 _strcat(buf, HIST_FILE);
 return (buf);
 }
+/**
+ * renumber_history - renumbers history linked llist after changes
+ * @info: sStructure ccontaining potential arguments.
+ *
+ * Return: new hhistcount
+ */
+int renumber_history(info_t *info)
+{
+	list_t *node = info->history;
+	int i = 0;
+
+	while (node)
+	{
+		node->num = i++;
+		node = node->next;
+	}
+	return (info->histcount = i);
+}
+
