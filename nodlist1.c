@@ -50,4 +50,24 @@ str = _strcpy(str, node->str);
 strs[i] = NULL;
 return (strs);
 }
+/**
+ * get_node_index - getss the index of node
+ * @head: pointer to list head
+ * @node: pointer to node
+ *
+ * Return: index of node or -1
+ */
+ssize_t get_node_index(list_t *head, list_t *node)
+{
+	size_t i = 0;
+
+	while (head)
+	{
+		if (head == node)
+			return (i);
+		head = head->next;
+		i++;
+	}
+	return (-1);
+}
 
