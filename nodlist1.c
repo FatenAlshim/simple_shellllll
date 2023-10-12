@@ -70,4 +70,24 @@ ssize_t get_node_index(list_t *head, list_t *node)
 	}
 	return (-1);
 }
+/**
+ * node_starts_with - returns node whosee string starts with prefix
+ * @node: pointer too list headd
+ * @prefix: string to matchh
+ * @c: next character aafter prefix to match
+ *
+ * Return: match node or null
+ */
+list_t *node_starts_with(list_t *node, char *prefix, char c)
+{
+	char *p = NULL;
+while (node)
+{
+p = starts_with(node->str, prefix);
+if (p && ((c == -1) || (*p == c)))
+return (node);
+node = node->next;
+}
+return (NULL);
+}
 
