@@ -38,7 +38,22 @@ return (ret);
 /**
  * _strcmp - performs lexic comparison of two strangs.
  * @s1: the first streng
- * @s2: the second stre`ng
+ * @s2: the second streng
  *
  * Return: negative if s1 < s2, positive if s1 > s2, zero if s1 == s2
  */
+int _strcmp(char *s1, char *s2)
+{
+while (*s1 && *s2)
+{
+if (*s1 != *s2)
+return (*s1 - *s2);
+s1++;
+s2++;
+}
+if (*s1 == *s2)
+return (0);
+else
+return (*s1 < *s2 ? -1 : 1);
+}
+
