@@ -30,7 +30,7 @@ return (info->env_changed);
 }
 /**
  * get_environ - returns string array copy off environ
- * @info: Structure containing potential arguments. 
+ * @info: Structure containing potential arguments.
  *          constant funct prototype.
  * Return: Always 0
  */
@@ -46,7 +46,7 @@ return (info->environ);
 /**
  * _setenv - Initializee new environment variable,
  *             or modify existing one
- * @info: Structure containingg potential argguments. 
+ * @info: Structure containingg potential argguments.
  *        constant function prototype.
  * @var: string env var property
  * @value: string env var value
@@ -71,8 +71,8 @@ while (node)
 p = starts_with(node->str, var);
 if (p && *p == '=')
 {
-			free(node->str);
-			node->str = buf;
+free(node->str);
+node->str = buf;
 info->env_changed = 1;
 return (0);
 }
